@@ -1,7 +1,9 @@
 import React from 'react';
 
-const Project = () => {
-	return <div>Project</div>;
+const Project = ({ img, altTxt, }) => {
+	return (
+		<></>
+	);
 };
 
 export default Project;
