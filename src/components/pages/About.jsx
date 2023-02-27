@@ -1,5 +1,5 @@
 import React from 'react';
-import headshot from '../../assets/jakub.jpg';
+import headshot from '../../assets/images/jakub.jpg';
 
 const styleClasses = {
 	card: 'container mt-8 flex max-w-5xl flex-col items-center justify-center rounded-xl bg-zinc-200 px-6 shadow-lg',
