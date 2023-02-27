@@ -14,7 +14,7 @@ let stlyeClasses = {
 
 const App = () => {
 	return (
-		<div className='App'>
+		<div className='bg-neutral-100 min-h-screen'>
 			<Header />
 			<main className={stlyeClasses.main}>
 				<Routes>
