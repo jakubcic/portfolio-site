@@ -4,8 +4,8 @@ import { Link, useMatch, useResolvedPath } from 'react-router-dom';
 const stlyeClasses = {
 	nav: 'flex justify-between m-2',
 	ul: 'flex gap-3',
-	li: 'rounded-lg hover:bg-slate-500',
-	activeli: 'rounded-lg bg-slate-600 hover:bg-slate-500',
+	li: 'rounded-lg hover:bg-zinc-600',
+	activeli: 'rounded-lg bg-slate-600 hover:bg-zinc-600',
 	link: 'h-full flex items-center px-2 py-1',
 };
 
