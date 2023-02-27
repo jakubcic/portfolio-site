@@ -2,7 +2,7 @@ import React from 'react';
 
 const Contact = () => {
 	return (
-		<section className='pb-20 pt-4 '>
+		<section className='pb-20 pt-8'>
 			<div className='container rounded-xl bg-zinc-200 shadow-lg'>
 				<div className='relative mx-auto max-w-5xl lg:grid lg:grid-cols-6'>
 					{/* <div class="relative mx-auto max-w-7xl"> */}
