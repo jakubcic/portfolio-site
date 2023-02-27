@@ -2,28 +2,25 @@ import React from 'react';
 import headshot from '../../assets/images/jakub.jpg';
 
 const styleClasses = {
+	container: 'pb-20 items-center justify-center flex-col',
 	card: 'container mt-8 flex max-w-5xl flex-col items-center justify-center rounded-xl bg-zinc-200 px-6 shadow-lg',
 	heading: 'text-3xl font-bold tracking-tight sm:text-4xl mb-4 md:mb-0',
 	imgHeaderSection: 'mt-6 flex flex-col items-center justify-center md:flex-row',
 	headshot: 'mx-6 mb-6 h-48 w-48 rounded-full md:mb-0 md:h-32 md:w-32',
-	cardBody: 'm-1 pb-6 md:m-6 md:py-2'
+	cardBody: 'm-1 pb-6 md:m-6 md:py-2',
 };
 
 const About = () => {
 	return (
-		<>
+		<section className={styleClasses.container}>
 			<div className={styleClasses.card}>
 				<section className={styleClasses.imgHeaderSection}>
-					<img
-						className={styleClasses.headshot}
-						src={headshot}
-						alt='headshot'
-					/>
+					<img className={styleClasses.headshot} src={headshot} alt='headshot' />
 					<h2 className={styleClasses.heading}>
 						Hello! My name is Jakub Paweł Cichon. I'm passionate about technology.
 					</h2>
 				</section>
-				<div className={styleClasses.cardBody} >
+				<div className={styleClasses.cardBody}>
 					<p className=''>
 						I'm new to the web development world and I'm thrilled to jump in with both feet and explore all it
 						has to offer! I communicate in English proficiently and in Polish at a B1 level (CEFR). I'm
@@ -38,7 +35,7 @@ const About = () => {
 					</p>
 				</div>
 			</div>
-		</>
+		</section>
 	);
 };
 
