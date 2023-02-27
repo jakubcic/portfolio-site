@@ -31,7 +31,7 @@ const Portfolio = () => {
 												{project.tech.map((tech) => (
 													<span
 														key={tech}
-														className='inline-flex items-center rounded-xl bg-blue-900 px-2.5 py-0.5 text-xs font-medium text-blue-200'
+														className='inline-flex items-center rounded-md bg-blue-900 px-2.5 py-0.5 text-xs font-medium text-blue-200'
 													>
 														{tech}
 													</span>
