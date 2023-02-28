@@ -4,7 +4,7 @@ import Navigation from './Navigation';
 
 const styleClasses = {
 	header: 'container min-w-full flex justify-between box-border items-center gap-8 h-16 px-4 bg-zinc-700 text-white text-lg',
-	title: 'text-3xl justify-start'
+	title: 'text-base sm:text-2xl justify-start'
 };
 
 const Header = () => {
