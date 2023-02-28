@@ -111,22 +111,23 @@ const Resume = () => {
 							</ul>
 						</div>
 						<div className={styleClasses.listBox}>
-							<h4 className={styleClasses.listHeadings}>Databases</h4>
-							<ul className={styleClasses.listStyle}>
-								<li>MySQL</li>
-								<li>Sequelize</li>
-								<li>NoSQL (MongoDB)</li>
-								<li>Mongoose</li>
-							</ul>
-						</div>
-						<div className={styleClasses.listBox}>
 							<h4 className={styleClasses.listHeadings}>Tools</h4>
 							<ul className={styleClasses.listStyle}>
 								<li>git</li>
 								<li>GitHub</li>
 								<li>npm</li>
+								<li>Homebrew (macOS)</li>
 								<li>bash</li>
 								<li>PowerShell</li>
+							</ul>
+						</div>
+						<div className={styleClasses.listBox}>
+							<h4 className={styleClasses.listHeadings}>Databases</h4>
+							<ul className={styleClasses.listStyle}>
+								<li>MySQL</li>
+								<li>Sequelize ORM</li>
+								<li>NoSQL (MongoDB)</li>
+								<li>Mongoose ODM</li>
 							</ul>
 						</div>
 					</section>
