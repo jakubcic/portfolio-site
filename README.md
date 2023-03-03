@@ -72,7 +72,6 @@ This application uses the following open source technologies:
 - [PostCSS](https://postcss.org/)
 - [Vite for bundling](https://vitejs.dev/)
 
-<br>
 
 ## License
 
