@@ -1,6 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { validateEmail, capitalize } from '../../utils/helpers.cjs';
 
 const Contact = () => {
+
+	const [errorMessage, setErrorMessage] = useState('');
+
+	const checkInput = (e) => {
+		if (e.target.name === 'email') {
+			const isValid = validateEmail(e.target.value);
+			if (!isValid) {
+				setErrorMessage('Your email is invalid.');
+			}
+		} else {
+			if (!e.target.value.length) {
+				setErrorMessage(`${capitalize(e.target.name)} is a required field.`);
+			} else {
+				setErrorMessage('');
+			}
+		}
+
+	};
+
 	return (
 		<section className='pb-20 pt-8'>
 			<div className='container rounded-xl bg-zinc-200 shadow-lg'>
@@ -62,7 +82,7 @@ const Contact = () => {
 									</dd>
 								</div>
 							</dl>
-							<p className='mt-6 font-semibold text-zinc-900'>
+							<div className='mt-6 font-semibold text-zinc-900'>
 								Are you a recruiter?
 								<p>
 									{' '}
@@ -74,7 +94,7 @@ const Contact = () => {
 										Please check out my LinkedIn
 									</a>
 								</p>
-							</p>
+							</div>
 						</div>
 					</div>
 					{/* future development: contact form that will send me an email */}
@@ -83,16 +103,17 @@ const Contact = () => {
 							{/* change action to API endpoint and method to POST when I have a server ready */}
 							<form action='/contact' method='GET' className='grid grid-cols-1 gap-y-6'>
 								<div>
-									<label htmlFor='full-name' className='sr-only'>
-										Full name
+									<label htmlFor='name' className='sr-only'>
+										Name
 									</label>
 									<input
 										type='text'
-										name='full-name'
-										id='full-name'
+										name='name'
+										id='name'
 										autoComplete='name'
 										className='focus:border-accent focus:ring-accent block w-full rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 shadow-sm'
-										placeholder='Full name'
+										placeholder='Name'
+										onBlur={checkInput}
 									/>
 								</div>
 								<div>
@@ -106,19 +127,7 @@ const Contact = () => {
 										autoComplete='email'
 										className='focus:border-accent focus:ring-accent block w-full rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 shadow-sm'
 										placeholder='Email'
-									/>
-								</div>
-								<div>
-									<label htmlFor='phone' className='sr-only'>
-										Phone
-									</label>
-									<input
-										type='text'
-										name='phone'
-										id='phone'
-										autoComplete='tel'
-										className='focus:border-accent focus:ring-accent block w-full rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 shadow-sm'
-										placeholder='Phone'
+										onBlur={checkInput}
 									/>
 								</div>
 								<div>
@@ -128,16 +137,16 @@ const Contact = () => {
 									<textarea
 										id='message'
 										name='message'
-										rows='4'
 										className='block h-40 w-full rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 shadow-sm focus:border-blue-700 focus:ring-blue-700'
 										placeholder='Message'
+										onBlur={checkInput}
 									></textarea>
 								</div>
-								<div>
-									{/* <button type='submit' className='btn btn-sm btn-secondary inline-flex justify-center'>
-										Submit
-									</button> */}
-									<button type='submit' className='inline-flex items-center rounded-md border border-transparent bg-blue-600 px-4 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'>
+								<div className='flex justify-between'>
+									<button
+										type='submit'
+										className='inline-flex items-center rounded-md border border-transparent bg-blue-600 px-4 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
+									>
 										<svg
 											xmlns='http://www.w3.org/2000/svg'
 											width='16'
@@ -150,6 +159,7 @@ const Contact = () => {
 										</svg>
 										<span className='mt-0.5'>Submit</span>
 									</button>
+									{errorMessage && <span className='mt-2 text-red-600'>{errorMessage}</span>}
 								</div>
 							</form>
 						</div>
