@@ -1,8 +1,9 @@
+import { btnIcons } from '../../utils/helpers.cjs';
 import grimsImg from '../../assets/images/grims-preview.jpg';
 import megaTechBlogImg from '../../assets/images/mega-tech-blog.png';
 import employeeTrackerImg from '../../assets/images/employee-tracker-cli.jpg';
 import socialNetworkApiImg from '../../assets/images/social-network-api.png';
-import { btnIcons } from '../../utils/helpers.cjs';
+import kingmeImg from '../../assets/images/kingme.png';
 
 const projectData = [
 	{
@@ -85,6 +86,28 @@ const projectData = [
 			},
 		],
 	},
+	{
+		id: 5,
+		title: 'kingme.gg',
+		description: 'kingme.gg is an online checkers game built with Node.js, Express, React, MongoDB, GraphQL, and TailwindCSS. Multiplayer support is still a work-in-progress. Currently users can play in a hot-seat mode where they can play against someone else locally on the same device.',
+		imgSrc: kingmeImg,
+		altText: 'kingme.gg landing page',
+		tech: ['React', 'node.js', 'express.js', 'MongoDB', 'GraphQL', 'TailwindCSS'],
+		links: [
+			{
+				id: 1,
+				text: 'Website',
+				url: 'https://kingme.gg/',
+				btnIcon: btnIcons.website,
+			},
+			{
+				id: 2,
+				text: 'GitHub',
+				url: 'https://github.com/jakubcic/kingme',
+				btnIcon: btnIcons.github,
+			},
+		],
+	}
 ];
 
 export default projectData;
